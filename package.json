@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "dayjs": "^1.10.8",
     "dotenv": "^16.0.0",
+    "jsdom": "^19.0.0",
     "rss-parser": "^3.12.0",
     "website-scraper": "^5.0.0",
     "website-scraper-existing-directory": "^1.0.0"

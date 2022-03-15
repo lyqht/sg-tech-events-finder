@@ -1,7 +1,8 @@
 import fs from 'fs'
 
 export const groupsPath = "demo/groups.json"
-export const eventsPath = "demo/eventsFromRss.json"
+export const eventsFromRssPath = "demo/eventsFromRss.json"
+export const eventsPath = "demo/eventsFormatted.json"
 
 // NOTE: all of these functions are intended to be used for development to replace the need for saving data to db
 // when integrating to events-api, we will have to rewritte these methods to crud from db instead.

@@ -1,26 +1,29 @@
 # sg-tech-events-finder
 
-This is a simple Node.js app to scrape the Meetup website to find Tech groups in Singapore, and the upcoming events for them.
+This is a simple Node.js app to scrape the Meetup website to find Tech groups in Singapore, and the upcoming events for them. 
 
 This is still a WIP.
 
 - [x] Scrape results from Meetup SG Tech Groups
 - [x] Parse events RSS to retrieve upcoming events
-- [ ] Determine event details such as start time & venue
+- [x] Determine event details such as start time & venue
+- [ ] Sort events by specific date
 
 
 Event details are intended to display as notifications shown in [DevSG_Skills events telegram](https://t.me/joinchat/BGedIEXk14wejiRXgH7BGw). 
 
-Some examples are shown below.
+An example of a notification is shown below.
 
 ```
+🗓 7 Upcoming Events for 03 Jul 2020, Fri 
 ⏰ 7:00 pm - Improve Monitoring and Observability for Kubernetes with OSS tools (Azure, Office and Data Community (Singapore)) - 📍Online event
 ⏰ 6:00 pm - Social Coding (Women Who Code Singapore) - 📍GeoHall @ GeoWorks, PSA Building, 460 Alexandra Road #07-01
 ```
 
 This meant that the data required would be
 ```js
-⏰ `${event_start_time} - ${event_name} ${group_name} 📍 ${isOnline ? 'Online Event' : event_venue}`
+`🗓 ${today_events_length} Upcoming Events for ${today}`
+`⏰ ${event_start_time} - ${event_name} ${group_name} 📍 ${isOnline ? 'Online Event' : event_venue}`
 ```
 
 ## Demo
@@ -67,9 +70,13 @@ However, unlike usual RSS feeds for articles where we can just rely on the `pubD
 
 ### Determine event details
 
-Hence, to grab the event details, we would have to login as an **anonymous** user to meetup.com, and to get the event details from `JSON.parse($('#__NEXT_DATA__').innerHTML)`.
+There are a few ways to get the event details. In this project, option 1 is implemented.
 
-An example of the result can be found in `pageProps.json`. The important filtered parts are shown below.
+#### Option 1 — Nextjs hydration data
+
+To grab the event details, we can login as an **anonymous** user to meetup.com, and to get the event details from `JSON.parse($('#__NEXT_DATA__').innerHTML)`. This utilizes the fact that the meetup site is created with the Next.js framework, and as to why this data exist in the DOM, if you are interested, you can read up [here](https://github.com/vercel/next.js/discussions/15117#:~:text=With%20__NEXT_DATA__%20%2C%20all,a%20performance%20issue%20or%20not.).
+
+An example of such data can be found in `pageProps.json`. The important filtered parts are shown below.
 
 ```json
 {
@@ -86,6 +93,35 @@ An example of the result can be found in `pageProps.json`. The important filtere
     }
 }
 ```
+
+After formatting the data for each of the events, the results can be found in `eventsFormatted.json`.
+
+An example of a formatted event item
+
+```json
+{
+    "title": "Open Source Community Day - OSSDayAPJ",
+    "eventUrl": "https://www.meetup.com/TIBCO-Singapore/events/283820568",
+    "startTime": "2022-03-24T11:00+08:00",
+    "endTime": "2022-03-24T14:00+08:00",
+    "isOnline": true,
+    "venue": "",
+    "groupName": "TIBCO Singapore User Group"
+},
+```
+
+#### Option 2 - Web Scraping
+
+Since we already have the event url from the parsed RSS, we can visit it directly and just get the relevant event details there from the webpage. These are the selectors if we want to get event details **without requiring the jsdom library** to parse next_data.
+
+```js
+const eventStartDateSelector = 'span.eventTimeDisplay-startDate' // <span>Thursday, March 17, 2022</span>
+const eventStartDatetimeSelector = 'span.eventTimeDisplay-startDate-time' // <span class="eventTimeDisplay-endDate-partialTime"><span>7:00 PM</span></span>
+const eventEndDatetimeSelector = 'span.eventTimeDisplay-endDate-partialTime' // <span class="eventTimeDisplay-endDate-partialTime"><span>8:00 PM</span><span> SST</span></span>
+```
+
+However, this option is more flaky in the sense if they change the UI, we will need update these selectors.
+
 ## Limitations
 
-A minority of RSS urls the app gives you may say that you don't have auth to access. That is probably something that needs to configured by that group's admin.
+A minority of RSS urls the app gives you may say that you don't have auth to access. That is probably something that needs to configured by that group's admin. This project has set it to ignore those RSS urls.

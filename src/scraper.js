@@ -23,7 +23,7 @@ class CustomPlugin {
   }
 }
 
-const options = {
+const meetupGroupOptions = {
   urls: [
     "https://www.meetup.com/cities/sg/singapore/tech/?country=sg&zipstatecity=singapore&category_names=tech",
   ],
@@ -33,7 +33,7 @@ const options = {
 };
 
 export const fetchMeetupGroups = async () => {
-  await scrape(options);
+  await scrape(meetupGroupOptions);
   console.log(
     `Finished scrapping! ${Object.keys(allGroups).length} groups are found.`
   );
