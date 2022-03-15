@@ -1,0 +1,551 @@
+{
+    "props": {
+        "pageProps": {
+            "isMobile": false,
+            "showMobileBanner": true,
+            "memberLocale": "en-US",
+            "localeMessages": {
+                "a11y.skipToContent": "Skip to content",
+                "desktopHeader.homepage": "Homepage",
+                "headerA11y.searchToggleButton": "Toggle search",
+                "desktopSearch.searchKeywords": "Search for keywords",
+                "desktopSearch.searchEvents": "Search events",
+                "searchLocationTypeahead.locationTypeaheadLabel": "Choose your location",
+                "searchLocationTypeahead.cityOrZipCode": "City or zip code",
+                "searchLocationTypeahead.searchLocationByCityOrZip": "Search for location by city or zip code",
+                "headerA11y.profileDrawerDescriptionOpen": "Show profile menu",
+                "mobileHeader.home": "Home",
+                "mobileHeader.logIn": "Log in",
+                "mobileHeader.signUp": "Sign up",
+                "desktopHeader.startNewGroup": "Start a new group",
+                "groupCard.publicGroupPrivacy": "This group’s content, including its members and event details, are visible to the public.",
+                "event.info.only1Host": "{HOST_1}",
+                "avatar.photoOf": "Photo of {NAME}",
+                "event-home.description": "Details",
+                "event-home.moreEvents": "See more events",
+                "event-home.durationTo": "to {END_DATE}",
+                "event.venue.linkVisible": "Link visible for attendees",
+                "shareButton.eventShareTitle": "Share this event",
+                "shareButton.label": "Share event",
+                "shareModal.title": "Share an event modal",
+                "eventStickyFooter.attendOnlineButton": "Attend online",
+                "footer.meetupOnFacebook": "Meetup on Facebook",
+                "footer.meetupOnTwitter": "Meetup on Twitter",
+                "footer.meetupOnYoutube": "Meetup on YouTube",
+                "footer.meetupOnInstagram": "Instagram",
+                "footer.createYourOwnGroup": "Create your own Meetup group.",
+                "footer.getStarted": "Get Started",
+                "footer.startNewGroup": "Start a new group",
+                "footer.yourAccount": "Your Account",
+                "footer.signUp": "Sign up",
+                "footer.logIn": "Log in",
+                "footer.help": "Help",
+                "footer.discover": "Discover",
+                "footer.groups": "Groups",
+                "footer.calendar": "Calendar",
+                "footer.topics": "Topics",
+                "footer.cities": "Cities",
+                "footer.onlineEvents": "Online Events",
+                "footer.localGuides": "Local Guides",
+                "footer.meetupText": "Meetup",
+                "footer.about": "About",
+                "footer.blog": "Blog",
+                "footer.meetupPro": "Meetup Pro",
+                "footer.careers": "Careers",
+                "footer.apps": "Apps",
+                "footer.followUs": "Follow us",
+                "footer.downloadFromGooglePlay": "Download app from Google Play",
+                "footer.downloadFromAppStore": "Download app from App Store",
+                "footer.meetupYear": "{YEAR} Meetup",
+                "footer.termsOfService": "Terms of Service",
+                "footer.privacyPolicy": "Privacy Policy",
+                "footer.cookiePolicy": "Cookie Policy"
+            },
+            "eventId": "284092401",
+            "slug": "platform-engineers-nyc",
+            "event": {
+                "__typename": "Event",
+                "id": "284092401",
+                "title": "Getting started with Kubernetes",
+                "description": "Join best-selling author Nigel Poulton and learn what Kubernetes is, why it's central to the future of cloud-native infrastructure and applications, and what it means to your career.\n\nIn his talk Nigel will cover these topics:\n\\- Demystify jargon\\, such as microservices\\, cloud\\-native\\, orchestration etc\\.\n\\- The impact of containers and Kubernetes on your organisation and career\n\\- How to get started with containers and Kubernetes\n\nThe live session will include a live Q&A where all questions are good questions. We’d like to encourage you to submit your questions in advance.\n\nA recording of the webinar and related materials will be shared with webinar attendees afterwards.\n\n_________________\nSpeaker:\nNigel Poulton, author of Quick Start Kubernetes\nNigel is a tech-oholic with a passion for demystifying exciting technologies. He's written several best-selling books and video training courses, and has helped well over 1 million people take their first steps with Docker and Kubernetes. When he's not playing with technology, he likes cars, scifi, and spending time with his family. He loves to connect with people, and you can reach him at nigelpoulton.com. He's also on most of the social media platforms at the \"nigelpoulton\" handle.",
+                "eventUrl": "https://www.meetup.com/platform-engineers-nyc/events/284092401",
+                "dateTime": "2022-03-24T14:00-04:00",
+                "isSaved": false,
+                "timezone": "US/Eastern",
+                "isAttending": false,
+                "attendingTicket": null,
+                "status": "published",
+                "endTime": "2022-03-24T15:00-04:00",
+                "imageUrl": "https://secure-content.meetupstatic.com/images/classic-events/502111682/676x380.webp",
+                "howToFindUs": "https://us02web.zoom.us/webinar/register/6316451792552/WN_2Bzx5STATuaM-iBZEZvE5w",
+                "venue": {
+                    "__typename": "Venue",
+                    "name": "Online event",
+                    "address": "",
+                    "city": "",
+                    "state": "",
+                    "country": "",
+                    "lat": -8.521147,
+                    "lng": 179.1962
+                },
+                "uiActions": {
+                    "__typename": "EventUiActions",
+                    "canAnnounce": false,
+                    "canDelete": false
+                },
+                "isOnline": true,
+                "going": 9,
+                "maxTickets": 0,
+                "currency": "USD",
+                "timeStatus": "UPCOMING",
+                "rsvpState": "JOIN_OPEN",
+                "series": null,
+                "waiting": 0,
+                "waitlistMode": "AUTO",
+                "guestsAllowed": false,
+                "numberOfAllowedGuests": 0,
+                "proCompleteRsvp": {
+                    "__typename": "ProCompleteRsvp",
+                    "isEnabled": false,
+                    "link": null
+                },
+                "rsvpSurveySettings": null,
+                "rsvpEventQuestion": null,
+                "images": [
+                    {
+                        "__typename": "Image",
+                        "baseUrl": "https://secure-content.meetupstatic.com/images/classic-events/"
+                    }
+                ],
+                "rsvpSettings": {
+                    "__typename": "RsvpOpenSettings",
+                    "rsvpOpenTime": null,
+                    "rsvpCloseTime": null
+                },
+                "covidPrecautions": {
+                    "__typename": "CovidPrecautions",
+                    "masks": null,
+                    "vaccinations": null,
+                    "details": null,
+                    "venueType": null
+                },
+                "isNetworkEvent": false,
+                "hosts": [
+                    {
+                        "__typename": "User",
+                        "id": "212965032",
+                        "name": "Theo C",
+                        "memberPhoto": {
+                            "__typename": "Image",
+                            "baseUrl": "https://secure-content.meetupstatic.com/images/classic-member/",
+                            "preview": null,
+                            "id": "308676721"
+                        }
+                    }
+                ],
+                "host": {
+                    "__typename": "User",
+                    "id": "212965032",
+                    "name": "Theo C",
+                    "memberPhoto": {
+                        "__typename": "Image",
+                        "baseUrl": "https://secure-content.meetupstatic.com/images/classic-member/",
+                        "preview": null,
+                        "id": "308676721"
+                    }
+                },
+                "feeSettings": null,
+                "group": {
+                    "__typename": "Group",
+                    "id": "34685830",
+                    "name": "Platform Engineers NYC",
+                    "isPrivate": false,
+                    "link": "https://www.meetup.com/platform-engineers-nyc",
+                    "joinMode": "OPEN",
+                    "topicCategory": {
+                        "__typename": "TopicCategory",
+                        "id": "546",
+                        "name": "Technology",
+                        "urlkey": "technology"
+                    },
+                    "topics": [
+                        {
+                            "__typename": "Topic",
+                            "id": "120095",
+                            "urlkey": "software-development",
+                            "name": "Software Development"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "31197",
+                            "urlkey": "paas-platform-as-a-service-",
+                            "name": "PaaS (Platform as a Service)"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "33089",
+                            "urlkey": "saas-software-as-a-service-",
+                            "name": "SaaS (Software as a Service)"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "46810",
+                            "urlkey": "configuration-management",
+                            "name": "Configuration Management"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "26468",
+                            "urlkey": "software-architecture",
+                            "name": "Software Architecture"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "87614",
+                            "urlkey": "devops",
+                            "name": "DevOps"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "126177",
+                            "urlkey": "infrastructure-as-code",
+                            "name": "Infrastructure as Code"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "166000",
+                            "urlkey": "continuous-delivery",
+                            "name": "Continuous Delivery"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "1454542",
+                            "urlkey": "docker",
+                            "name": "Docker"
+                        },
+                        {
+                            "__typename": "Topic",
+                            "id": "1508781",
+                            "urlkey": "devops-automation",
+                            "name": "DevOps Automation"
+                        }
+                    ],
+                    "urlname": "platform-engineers-nyc",
+                    "country": "us",
+                    "isPrimaryOrganizer": false,
+                    "isOrganizer": false,
+                    "isMember": false,
+                    "needsPhoto": false,
+                    "proNetwork": null,
+                    "stats": {
+                        "__typename": "GroupStats",
+                        "memberCounts": {
+                            "__typename": "GroupMemberCounts",
+                            "all": 225
+                        }
+                    },
+                    "needsQuestions": false,
+                    "membershipDues": null,
+                    "duesSettings": null,
+                    "membershipMetadata": null,
+                    "questions": [],
+                    "sponsors": {
+                        "__typename": "GroupSponsorConnection",
+                        "edges": []
+                    },
+                    "groupPhoto": {
+                        "__typename": "Image",
+                        "id": "501440463",
+                        "baseUrl": "https://secure-content.meetupstatic.com/images/classic-events/"
+                    },
+                    "stepUpInfo": null
+                }
+            },
+            "__APOLLO_STATE__": {
+                "Image:308676721": {
+                    "id": "308676721",
+                    "__typename": "Image",
+                    "baseUrl": "https://secure-content.meetupstatic.com/images/classic-member/",
+                    "preview": null
+                },
+                "User:212965032": {
+                    "id": "212965032",
+                    "__typename": "User",
+                    "name": "Theo C",
+                    "memberPhoto": {
+                        "__ref": "Image:308676721"
+                    }
+                },
+                "TopicCategory:546": {
+                    "id": "546",
+                    "__typename": "TopicCategory",
+                    "name": "Technology",
+                    "urlkey": "technology"
+                },
+                "Topic:120095": {
+                    "id": "120095",
+                    "__typename": "Topic",
+                    "urlkey": "software-development",
+                    "name": "Software Development"
+                },
+                "Topic:31197": {
+                    "id": "31197",
+                    "__typename": "Topic",
+                    "urlkey": "paas-platform-as-a-service-",
+                    "name": "PaaS (Platform as a Service)"
+                },
+                "Topic:33089": {
+                    "id": "33089",
+                    "__typename": "Topic",
+                    "urlkey": "saas-software-as-a-service-",
+                    "name": "SaaS (Software as a Service)"
+                },
+                "Topic:46810": {
+                    "id": "46810",
+                    "__typename": "Topic",
+                    "urlkey": "configuration-management",
+                    "name": "Configuration Management"
+                },
+                "Topic:26468": {
+                    "id": "26468",
+                    "__typename": "Topic",
+                    "urlkey": "software-architecture",
+                    "name": "Software Architecture"
+                },
+                "Topic:87614": {
+                    "id": "87614",
+                    "__typename": "Topic",
+                    "urlkey": "devops",
+                    "name": "DevOps"
+                },
+                "Topic:126177": {
+                    "id": "126177",
+                    "__typename": "Topic",
+                    "urlkey": "infrastructure-as-code",
+                    "name": "Infrastructure as Code"
+                },
+                "Topic:166000": {
+                    "id": "166000",
+                    "__typename": "Topic",
+                    "urlkey": "continuous-delivery",
+                    "name": "Continuous Delivery"
+                },
+                "Topic:1454542": {
+                    "id": "1454542",
+                    "__typename": "Topic",
+                    "urlkey": "docker",
+                    "name": "Docker"
+                },
+                "Topic:1508781": {
+                    "id": "1508781",
+                    "__typename": "Topic",
+                    "urlkey": "devops-automation",
+                    "name": "DevOps Automation"
+                },
+                "Image:501440463": {
+                    "id": "501440463",
+                    "__typename": "Image",
+                    "baseUrl": "https://secure-content.meetupstatic.com/images/classic-events/"
+                },
+                "Group:34685830": {
+                    "id": "34685830",
+                    "__typename": "Group",
+                    "name": "Platform Engineers NYC",
+                    "isPrivate": false,
+                    "link": "https://www.meetup.com/platform-engineers-nyc",
+                    "joinMode": "OPEN",
+                    "topicCategory": {
+                        "__ref": "TopicCategory:546"
+                    },
+                    "topics": [
+                        {
+                            "__ref": "Topic:120095"
+                        },
+                        {
+                            "__ref": "Topic:31197"
+                        },
+                        {
+                            "__ref": "Topic:33089"
+                        },
+                        {
+                            "__ref": "Topic:46810"
+                        },
+                        {
+                            "__ref": "Topic:26468"
+                        },
+                        {
+                            "__ref": "Topic:87614"
+                        },
+                        {
+                            "__ref": "Topic:126177"
+                        },
+                        {
+                            "__ref": "Topic:166000"
+                        },
+                        {
+                            "__ref": "Topic:1454542"
+                        },
+                        {
+                            "__ref": "Topic:1508781"
+                        }
+                    ],
+                    "urlname": "platform-engineers-nyc",
+                    "country": "us",
+                    "isPrimaryOrganizer": false,
+                    "isOrganizer": false,
+                    "isMember": false,
+                    "needsPhoto": false,
+                    "proNetwork": null,
+                    "stats": {
+                        "__typename": "GroupStats",
+                        "memberCounts": {
+                            "__typename": "GroupMemberCounts",
+                            "all": 225
+                        }
+                    },
+                    "needsQuestions": false,
+                    "membershipDues": null,
+                    "duesSettings": null,
+                    "membershipMetadata": null,
+                    "questions": [],
+                    "sponsors": {
+                        "__typename": "GroupSponsorConnection",
+                        "edges": []
+                    },
+                    "groupPhoto": {
+                        "__ref": "Image:501440463"
+                    },
+                    "stepUpInfo": null
+                },
+                "Event:284092401!chp": {
+                    "id": "284092401!chp",
+                    "__typename": "Event",
+                    "title": "Getting started with Kubernetes",
+                    "description": "Join best-selling author Nigel Poulton and learn what Kubernetes is, why it's central to the future of cloud-native infrastructure and applications, and what it means to your career.\n\nIn his talk Nigel will cover these topics:\n\\- Demystify jargon\\, such as microservices\\, cloud\\-native\\, orchestration etc\\.\n\\- The impact of containers and Kubernetes on your organisation and career\n\\- How to get started with containers and Kubernetes\n\nThe live session will include a live Q&A where all questions are good questions. We’d like to encourage you to submit your questions in advance.\n\nA recording of the webinar and related materials will be shared with webinar attendees afterwards.\n\n_________________\nSpeaker:\nNigel Poulton, author of Quick Start Kubernetes\nNigel is a tech-oholic with a passion for demystifying exciting technologies. He's written several best-selling books and video training courses, and has helped well over 1 million people take their first steps with Docker and Kubernetes. When he's not playing with technology, he likes cars, scifi, and spending time with his family. He loves to connect with people, and you can reach him at nigelpoulton.com. He's also on most of the social media platforms at the \"nigelpoulton\" handle.",
+                    "eventUrl": "https://www.meetup.com/platform-engineers-nyc/events/284092401",
+                    "dateTime": "2022-03-24T14:00-04:00",
+                    "isSaved": false,
+                    "timezone": "US/Eastern",
+                    "isAttending": false,
+                    "attendingTicket": null,
+                    "status": "published",
+                    "endTime": "2022-03-24T15:00-04:00",
+                    "imageUrl": "https://secure-content.meetupstatic.com/images/classic-events/502111682/676x380.webp",
+                    "howToFindUs": "https://us02web.zoom.us/webinar/register/6316451792552/WN_2Bzx5STATuaM-iBZEZvE5w",
+                    "venue": {
+                        "__typename": "Venue",
+                        "name": "Online event",
+                        "address": "",
+                        "city": "",
+                        "state": "",
+                        "country": "",
+                        "lat": -8.521147,
+                        "lng": 179.1962
+                    },
+                    "uiActions": {
+                        "__typename": "EventUiActions",
+                        "canAnnounce": false,
+                        "canDelete": false
+                    },
+                    "isOnline": true,
+                    "going": 9,
+                    "maxTickets": 0,
+                    "currency": "USD",
+                    "timeStatus": "UPCOMING",
+                    "rsvpState": "JOIN_OPEN",
+                    "series": null,
+                    "waiting": 0,
+                    "waitlistMode": "AUTO",
+                    "guestsAllowed": false,
+                    "numberOfAllowedGuests": 0,
+                    "proCompleteRsvp": {
+                        "__typename": "ProCompleteRsvp",
+                        "isEnabled": false,
+                        "link": null
+                    },
+                    "rsvpSurveySettings": null,
+                    "rsvpEventQuestion": null,
+                    "images": [
+                        {
+                            "__typename": "Image",
+                            "baseUrl": "https://secure-content.meetupstatic.com/images/classic-events/"
+                        }
+                    ],
+                    "rsvpSettings": {
+                        "__typename": "RsvpOpenSettings",
+                        "rsvpOpenTime": null,
+                        "rsvpCloseTime": null
+                    },
+                    "covidPrecautions": {
+                        "__typename": "CovidPrecautions",
+                        "masks": null,
+                        "vaccinations": null,
+                        "details": null,
+                        "venueType": null
+                    },
+                    "isNetworkEvent": false,
+                    "hosts": [
+                        {
+                            "__ref": "User:212965032"
+                        }
+                    ],
+                    "host": {
+                        "__ref": "User:212965032"
+                    },
+                    "feeSettings": null,
+                    "group": {
+                        "__ref": "Group:34685830"
+                    }
+                },
+                "ROOT_QUERY": {
+                    "__typename": "Query",
+                    "event({\"id\":\"284092401\"})": {
+                        "__ref": "Event:284092401!chp"
+                    }
+                }
+            }
+        },
+        "__N_SSP": true
+    },
+    "page": "/[slug]/events/[eventId]",
+    "query": {
+        "slug": "platform-engineers-nyc",
+        "eventId": "284092401"
+    },
+    "buildId": "3407800d44fb463891508085b815427181cf8004",
+    "isFallback": false,
+    "dynamicIds": [
+        48429
+    ],
+    "gssp": true,
+    "locale": "en-US",
+    "locales": [
+        "en-US",
+        "en-AU",
+        "de",
+        "de-DE",
+        "es",
+        "es-ES",
+        "fr",
+        "fr-FR",
+        "it",
+        "it-IT",
+        "ja",
+        "ja-JP",
+        "ko",
+        "ko-KR",
+        "nl",
+        "nl-NL",
+        "pl",
+        "pl-PL",
+        "pt",
+        "pt-BR",
+        "ru",
+        "ru-RU",
+        "tr",
+        "tr-TR",
+        "th-TH"
+    ],
+    "defaultLocale": "en-US",
+    "scriptLoader": []
+}
