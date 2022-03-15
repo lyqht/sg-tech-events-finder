@@ -1,3 +1,4 @@
+<!-- omit in toc -->
 # sg-tech-events-finder
 
 This is a simple Node.js app to scrape the Meetup website to find Tech groups in Singapore, and the upcoming events for them. 
@@ -6,11 +7,25 @@ This is still a WIP.
 
 - [x] Scrape results from Meetup SG Tech Groups
 - [x] Parse events RSS to retrieve upcoming events
-- [x] Determine event details such as start time & venue
+- [x] Determine event details
 - [ ] Sort events by specific date
 
+---
 
-Event details are intended to display as notifications shown in [DevSG_Skills events telegram](https://t.me/joinchat/BGedIEXk14wejiRXgH7BGw). 
+Table of contents
+
+- [Project Goal](#project-goal)
+- [Demo](#demo)
+  - [Scrape results from Meetup SG Tech Groups](#scrape-results-from-meetup-sg-tech-groups)
+  - [Parse events RSS to retrieve upcoming events](#parse-events-rss-to-retrieve-upcoming-events)
+  - [Determine event details](#determine-event-details)
+    - [Option 1 — Nextjs hydration data](#option-1--nextjs-hydration-data)
+    - [Option 2 - Web Scraping](#option-2---web-scraping)
+- [Limitations](#limitations)
+
+## Project Goal
+
+In Singapore, many devs rely upon the [DevSG_Skills events telegram](https://t.me/joinchat/BGedIEXk14wejiRXgH7BGw) to search for upcoming events. 
 
 An example of a notification is shown below.
 
@@ -20,15 +35,34 @@ An example of a notification is shown below.
 ⏰ 6:00 pm - Social Coding (Women Who Code Singapore) - 📍GeoHall @ GeoWorks, PSA Building, 460 Alexandra Road #07-01
 ```
 
-This meant that the data required would be
+However, since Meetup API has changed to require a paid subscription, the telegram group has stopped showing any events for some time. 
+
+This projects aims to spike and **implement an alternative way to retrieve events from the tech meetup groups in Singapore**.
+
+Before, the backend app [events-api](https://github.com/engineersftw/events-api) has a fetchEvents route for the telegram bot to call to retrieve data of the following format.
+
 ```js
-`🗓 ${today_events_length} Upcoming Events for ${today}`
-`⏰ ${event_start_time} - ${event_name} ${group_name} 📍 ${isOnline ? 'Online Event' : event_venue}`
+{
+    id: event.platform_identifier,
+    name: event.name,
+    description: htmlToText.fromString(event.description),
+    location: event.location,
+    url: event.url,
+    group_id: event.group_id,
+    group_name: event.group_name,
+    group_url: event.group_url,
+    formatted_time: moment(event.start_time).tz('Asia/Singapore').format('DD MMM YYYY, ddd, h:mm a'),
+    unix_start_time: moment(event.start_time).unix(),
+    start_time: moment(event.start_time).tz('Asia/Singapore').format(),
+    end_time: moment(event.end_time).tz('Asia/Singapore').format(),
+    platform: event.platform,
+    rsvp_count: event.rsvp_count
+}
 ```
 
 ## Demo
 
-### Scrape Results
+### Scrape results from Meetup SG Tech Groups
 
 Scrape results can be found in `/demo`. The formatted result is in `groups.json`.
 
@@ -45,9 +79,9 @@ An example of an item found in the list of formatted results
 
 They are pretty self-explanatory what they are.
 
-You can use the eventsUrl here to check for upcoming events. If you can't find any in the XML file, that means that group has no upcoming events.
+You can use the `eventsUrl` here to check for upcoming events. If you can't find any in the RSS feed, this means that group has no upcoming events.
 
-### Parsed RSS
+### Parse events RSS to retrieve upcoming events
 
 The parsed events from the `eventsUrl` result is in `eventsFromRss.json` 
 
@@ -112,7 +146,7 @@ An example of a formatted event item
 
 #### Option 2 - Web Scraping
 
-Since we already have the event url from the parsed RSS, we can visit it directly and just get the relevant event details there from the webpage. These are the selectors if we want to get event details **without requiring the jsdom library** to parse next_data.
+Since we already have the event url from the parsed RSS, we can also visit it directly and just get the relevant event details there from the webpage. These are the selectors if we want to get event details **without requiring the jsdom library** to parse next_data.
 
 ```js
 const eventStartDateSelector = 'span.eventTimeDisplay-startDate' // <span>Thursday, March 17, 2022</span>
@@ -120,7 +154,7 @@ const eventStartDatetimeSelector = 'span.eventTimeDisplay-startDate-time' // <sp
 const eventEndDatetimeSelector = 'span.eventTimeDisplay-endDate-partialTime' // <span class="eventTimeDisplay-endDate-partialTime"><span>8:00 PM</span><span> SST</span></span>
 ```
 
-However, this option is more flaky in the sense if they change the UI, we will need update these selectors.
+However, this option is more flaky in the sense if Meetup website changes the UI, we will need update these selectors.
 
 ## Limitations
 
