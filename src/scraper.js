@@ -32,7 +32,7 @@ const options = {
   sources: [{ selector: ".groupCard.noRatings>div>a", attr: "href" }],
 };
 
-export const getMeetupGroups = async () => {
+export const fetchMeetupGroups = async () => {
   await scrape(options);
   console.log(
     `Finished scrapping! ${Object.keys(allGroups).length} groups are found.`
