@@ -8,17 +8,38 @@ export const getEventDetails = async (eventGuid) => {
     }
     const {data} = response
     const dom = new JSDOM(data)
-    const nextData = JSON.parse(dom.window.document.getElementById("__NEXT_DATA__").innerHTML)
+    try {
+        const nextData = JSON.parse(dom.window.document.getElementById("__NEXT_DATA__").innerHTML)
+        
+        const {
+          id,
+          title,
+          eventUrl,
+          description,
+          dateTime,
+          endTime,
+          isOnline,
+          group,
+          venue,
+          howToFindUs,
+          going
+        } = nextData.props.pageProps.event;
     
-    const { title, eventUrl, dateTime, endTime, isOnline, howToFindUs, group } = nextData.props.pageProps.event;
-
-    return {
-        title,
-        eventUrl,
-        startTime: dateTime,
-        endTime: endTime,
-        isOnline,
-        venue: howToFindUs,
-        groupName: group.name
+        return {
+            id,
+            name: title,
+            eventUrl,
+            description,
+            startTime: dateTime,
+            endTime: endTime,
+            isOnline,
+            url: eventGuid,
+            group,
+            venue,
+            howToFindUs,
+            yes_rsvp_count: going
+        }
+    } catch (err) {
+        console.error(`Event ${eventGuid} met error. ${err}`)
     }
 }
