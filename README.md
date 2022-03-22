@@ -3,17 +3,13 @@
 
 This is a simple Node.js app to scrape the Meetup website to find Tech groups in Singapore, and the upcoming events for them. 
 
-This is still a WIP.
-
-- [x] Scrape results from Meetup SG Tech Groups
-- [x] Parse events RSS to retrieve upcoming events
-- [x] Determine event details
-
 ---
 
 Table of contents
 
 - [Project Goal](#project-goal)
+- [Task Checklist](#task-checklist)
+- [Future Work](#future-work)
 - [Demo](#demo)
   - [Scrape results from Meetup SG Tech Groups](#scrape-results-from-meetup-sg-tech-groups)
   - [Parse events RSS to retrieve upcoming events](#parse-events-rss-to-retrieve-upcoming-events)
@@ -21,6 +17,8 @@ Table of contents
     - [Option 1 — Nextjs hydration data](#option-1--nextjs-hydration-data)
     - [Option 2 - Web Scraping](#option-2---web-scraping)
 - [Limitations](#limitations)
+
+---
 
 ## Project Goal
 
@@ -58,6 +56,16 @@ Before, the backend app [events-api](https://github.com/engineersftw/events-api)
     rsvp_count: event.rsvp_count
 }
 ```
+
+## Task checklist
+
+- [x] Scrape results from Meetup SG Tech Groups
+- [x] Parse events RSS to retrieve upcoming events
+- [x] Determine event details
+
+## Future Work
+
+This spike implementation has since been [integrated into events-api](https://github.com/engineersftw/events-api/pull/68), but it can easily be extended to find tech groups and events from other locales too!
 
 ## Demo
 
