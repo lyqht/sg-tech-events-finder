@@ -8,7 +8,6 @@ This is still a WIP.
 - [x] Scrape results from Meetup SG Tech Groups
 - [x] Parse events RSS to retrieve upcoming events
 - [x] Determine event details
-- [ ] Sort events by specific date
 
 ---
 
